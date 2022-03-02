@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color: #000;
+	background: #332F29;
+	font-size:100%;
+}
+#contenedor {
+	width: 800px;
+	background: #8FA68E;
+	margin-right:auto;
+	margin-left:auto;
+	overflow: hidden;
+}
+nav {
+	background: #CC3910;
+	float: left;
+	width: 160px;
+}
+ul {
+	list-style-type:none;
+}
+a {
+	color:#F1F2C0;
+	text-decoration: none;
+}
+section {
+	background: #F1F2C0;
+	float: left;
+	margin: 0 0 0 25px;
+	width: 400px;
+}
+aside {
+	background: #CCC59E;
+	float: right;
+	width: 190px;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		color: #000;
+		background: #332F29;
+		/*font-size:70%;*/
+		margin: 0;
+		padding: 0;
+	}
+	#contenedor {
+		/*width: 800px;*/
+		background: #8FA68E;
+	}
+	
+	#contenedor h1{
+		margin-top: 0px;
+	}
+	nav {
+		background: #f19a29;
+		/*float: left;
+		width: 160px;*/
+		width: 100%;
+		border-bottom: solid black 2px;
+	}
+	ul {
+		list-style-type:none;
+		justify-content: space-around;
+	}
+
+	a {
+		/*color:#F1F2C0;*/
+		color: #000;
+		text-decoration: none;
+	}
+
+	li {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	section {
+		background: #F1F2C0;
+		/*float: left;*/
+		margin: 0;
+		width: 100%;
+		border-bottom: solid black 2px;
+		padding-bottom: 10px;
+	}
+	aside {
+		background: #CCC59E;
+		/*float: right;*/
+		width: 100%;
+		padding-bottom: 10px;
+}  

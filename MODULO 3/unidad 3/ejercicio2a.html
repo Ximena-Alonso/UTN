@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+    <script>
+        var n, i;
+        var num;
+        var valor=0;
+        n=prompt('coloque la cantidad de numeros que ingresara','');
+
+        for( var i=0; i<n; i++){
+            num=prompt('ingrese un numero','');
+            
+            if( parseInt(num) >parseInt(valor)){
+                valor= (num);
+                console.log(valor);
+            }     
+        }        
+        document.write('El numero mayor que ud ingreso es ',valor);
+        
+    </script>
+</body>
+</html>

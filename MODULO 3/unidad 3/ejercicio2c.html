@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+    <script>
+        var n, i;
+        var num =[]
+        var valor=0;
+        n=prompt('coloque la cantidad de numeros que ingresara','');
+        
+        i=0
+        while(i<n){ 
+            num[i]=prompt('ingrese el numero de la posisicion '+(i+1)+'');
+            
+            if( parseInt(num[i]) >parseInt(valor)){
+                valor= (num[i]);
+                console.log(valor);
+            }     
+            i=parseInt(i)+1
+
+        }        
+        document.write('El numero mayor que ud ingreso es ',valor);
+        console.log(num);
+        
+    </script>
+</body>
+</html>

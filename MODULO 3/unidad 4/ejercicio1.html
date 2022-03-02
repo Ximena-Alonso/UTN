@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio1.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cambiar el color de la pagina</h1>
+    <h2>Elija una opcion seleccionando los cuadrados</h2>
+    <div class="cuadrado " id="azul"></div>
+    <div class="cuadrado " id="amarillo"></div>
+    <div class="cuadrado " id="verde"></div>
+    <div class="cuadrado " id="rojo"></div>
+
+    
+    <script>
+    
+        var azul = document.getElementById('azul');
+        azul.addEventListener('click', function(){
+            document.body.style.backgroundColor ='rgb(71, 71, 238)';
+        });
+
+        var amarillo = document.getElementById('amarillo');
+        amarillo.addEventListener('click', function(){
+            document.body.style.backgroundColor ='rgb(218, 218, 97)';
+        });
+
+        var verde = document.getElementById('verde');
+        verde.addEventListener('click', function(){
+            document.body.style.backgroundColor ='rgb(43, 102, 43)';
+        });
+
+        var rojo = document.getElementById('rojo'); 
+        rojo.addEventListener('click', function(){
+            document.body.style.backgroundColor ='rgb(182, 59, 59)';
+        });
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="apr"></div>
+    <script>
+          
+        var alumnos = [
+            {nombre: 'Juan Gomez',
+            nota: 7}, 
+            {nombre: 'Pedro Rodriguez',
+            nota: 4}, 
+            {nombre: 'Roxana García',
+            nota: 8}, 
+            {nombre: 'Luciano Lopez',
+            nota: 5}, 
+            {nombre: 'Fernanda Gimenez',
+            nota: 6}, 
+            {nombre: 'Florencia Martinez',
+            nota: 10}, 
+            {nombre: 'Raul Sanchez',
+            nota: 7}, 
+            {nombre: 'Sandra Figueroa',
+            nota: 8}
+        ];
+        
+        let aprobados = alumnos.filter(function(alumnos){
+           return alumnos.nota>=7; 
+           
+        });    
+        
+        console.log("listado de alumnos: ");
+        console.log(alumnos);
+        console.log("cantidad de aprobados ");
+        console.log(aprobados.length);
+        console.log("Alumnos aprobados ");
+        console.log(aprobados); 
+
+        document.write("Listado total de alumnos: <br> "); 
+        for (var i=0;i<alumnos.length;i++){
+            document.write(alumnos[i]["nombre"]+"<br>");
+        }      
+        
+        document.write("<br> Cantidad de aprobados: "); 
+        document.write(aprobados.length+"<br> <br>"); 
+
+        document.write("Alumnos aprobados con sus notas: <br> ");
+        for (var i=0;i<aprobados.length;i++){
+            document.write(aprobados[i]["nombre"]+":");
+            document.write(" "+aprobados[i]["nota"]+"<br>");
+        }     
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <textarea name="" id="texto" placeholder="Escriba el texto" maxlength="50" cols="30" rows="10" onkeyup="contador()"></textarea>;
+    <div id="total"></div>;
+    
+    <script>
+        function contador(){
+                var valor= document.getElementById('texto'),
+                    maxcant=50,
+                    cant=valor.value.length,
+                    rest= maxcant-cant,
+                    respuesta= document.getElementById('total')
+                respuesta.innerHTML = 'La cantidad de caracteres escritos es ' +cant+ ' /te quedan '+rest;    
+                if(rest<=0){
+                    respuesta.style.color ="red";
+                } else {
+                    respuesta.style.color ="black";
+                    }       
+        }
+    </script>
+
+</body>
+</html>

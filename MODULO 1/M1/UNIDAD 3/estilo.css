@@ -1,0 +1,53 @@
+body{
+    
+    color: black;
+    font-family: sans-serif;
+}
+h1{
+    color: rgb(122, 7, 65);
+    border: black dashed;
+    font-family: Cambria;
+    font-size: 50px;
+    text-align: center;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-columnas{
+    width: 100%;
+    margin: auto;
+    border-top: black solid 3px;
+    margin-right: 50%; 
+    
+}
+.columnas{
+    width: 50%;
+    float: left;
+    display: flex;
+    padding-bottom: 30px;
+    
+}
+.perfil{
+    width: 75%;
+    clear: both;
+    
+}
+h5{
+    font-weight: bolder;
+    font-size: 20px;
+}
+h5 a:hover{
+    cursor: pointer;
+    color: crimson;
+    text-decoration: none;
+
+}
+#formulario{
+    width: 350px;
+    border: solid black;
+    padding: 20px;
+    background-color: rgb(206, 48, 48);
+}
