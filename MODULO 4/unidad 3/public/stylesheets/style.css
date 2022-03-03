@@ -1,8 +1,522 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  font-family:open sans;
+  font-size: 14px;
+  margin: 5px 20px 0 20px;
+  line-height: 20px;
+  background-color: #edf1f0;
 }
 
-a {
-  color: #00B7FF;
+body h1, h2, h3, h4, h5, h6{
+  color: rgb(18, 126, 161) ;
 }
+
+header{
+  background: rgb(190,246,233);
+  background: linear-gradient(0deg, rgba(190,246,233,1) 0%, rgba(80,251,234,0.969625350140056) 60%);
+  font-family: Mochiy Pop P One;
+}
+
+header h1{
+  font-size: 20px;
+  display: inline;
+  position: relative;
+  bottom: 30px;
+  color: black;
+}
+
+header img{
+  border-radius: 50%;
+  width: 100px;
+  margin: 5px 0 0 30px;
+}
+
+nav{
+  background:#bef6e9;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+ align-items: center; 
+ padding: 5px 0 0px 0px;
+}
+
+nav ul li{
+  width: 17%;
+  text-align: center;
+  border: #c5ddd7 solid 1px;
+  border-bottom: none;
+  height: 30px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav ul li a:hover{
+  color: rgba(0,0,0,0.3);
+}
+
+nav ul li.activo{
+  background-color: #edf1f0;
+}
+/*fin encabezado*/
+
+/*inicio empresa*/
+
+#empresa img{
+  margin-top: 10px;
+  width: 100%;
+}
+
+#empresa .row{
+  column-count: 2;
+  column-gap: 50px;
+  text-align: justify;
+  margin: 10px 10px 20px 10px; 
+  font-size: 0.9em;  
+}
+
+#empresa h3{
+  text-align: center;
+  font-size: 2em;
+}
+#empresa .columna1 {
+  line-height: 30px;
+  border-radius: 24px;
+  border: 3px double black;
+  padding: 10px;
+  box-shadow: 20px 0 15px black;
+  transition: all 2s ease;
+  max-width: 85%;
+}
+
+#empresa .columna1:hover , 
+#empresa .columna2:hover{
+  background-color: rgba(149, 247, 238, 0.918);
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(1.05, 1);
+}
+
+#empresa .columna2{
+  break-before: column;
+  border-radius: 24px;
+  border: 3px double black;
+  padding: 10px;
+  line-height: 30px;
+  box-shadow: 20px 0 15px black;
+  transition: all 2s ease;
+  max-width: 85%;
+}
+
+#empresa .eleccion{
+  line-height: 30px; 
+}   
+
+#empresa .eleccion h3{
+  margin-bottom: 10px;
+}   
+
+#empresa .eleccion ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  margin-bottom: 220px;
+}
+
+#empresa .eleccion ul a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#empresa .eleccion > ul li {
+  position: relative;
+  width: 100%;
+  
+}
+
+#empresa .eleccion li a:hover {
+  background:#5b78a7;
+  max-width: 38%;  
+}
+
+#empresa .eleccion li  .item {
+  display:none;
+  position: relative;
+  top: -30px;
+  width: 62%;
+  float: right; 
+  border: black solid 1px;
+  border-radius: 2.5%;  
+}
+
+#empresa .eleccion ul li:hover > .item {
+  display: block;  
+}
+
+@media  (max-width:720px) {
+  #empresa .row{
+      columns: 0;
+      display: contents;
+      text-align: justify;
+      margin: 20px; 
+      font-size: 0.9em;  
+  }
+  
+  #empresa h3{
+      text-align: center;
+      font-size: 1.5em;
+  }
+  #empresa .columna1 {
+      margin-top: 20px;
+      line-height: 25px;
+      border-radius: 24px;
+      border: 3px double black;
+      padding: 10px;
+      box-shadow: 20px 0 15px black;
+      transition: all 2s ease;
+      max-width: 90%;
+  }
+  
+  #empresa .columna1:hover , 
+  #empresa .columna2:hover{
+      background-color: rgba(149, 247, 238, 0.918);
+      border-radius: 10px;
+      cursor: pointer;
+      transform: scale(1.05, 1);
+  }
+   
+  #empresa .columna2{
+      margin-top: 20px;
+      border-radius: 24px;
+      border: 3px double black;
+      padding: 10px;
+      line-height: 25px;
+      box-shadow: 20px 0 15px black;
+      transition: all 2s ease;
+      max-width: 900%;
+  } 
+      
+  #empresa .eleccion ul {
+      list-style:none;
+      margin:0;
+      padding:0;
+  }
+  
+  #empresa .eleccion > li {
+      float:left;
+  }
+      
+  #empresa .eleccion li a:hover {
+      background:#5b78a7;
+      max-width: 100%;
+  }
+  
+  #empresa .eleccion ul a {
+      display: block;
+      padding: 2em;
+      background-color: #b0ceeb;
+      text-decoration: none;
+      color: #191C26;
+  }
+  
+  #empresa .eleccion ul  .item {
+      display:none;
+      position: initial;
+      top: 0;
+      width: 100%;
+      height: 270px;
+      float: none;
+  }
+  #empresa .eleccion ul li:hover > .item {
+      display:block;
+      max-width: 100%;
+  }
+  
+}
+
+/*fin empresa*/
+
+/*inicio nosotros*/
+.nos h2{
+  margin-bottom: 1px;
+  margin-top: 0;
+}
+
+#nosotros .nos{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#nosotros .descripcion{  
+  text-align: justify;
+}
+
+#nosotros .descripcion img{
+  margin: 15px 10px;
+  width: 100%; 
+  align-items: center;
+}
+
+#nosotros .personas{
+  display: flex;
+  flex-direction: row;
+  overflow: auto;    
+}
+
+#nosotros .persona{
+  margin-left: 2.3%;
+  border: grey solid 1px;
+  border-radius: 0.25em;
+  max-width: -webkit-fill-available;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#nosotros .persona:first-child{
+  margin-left: 0;
+}   
+
+#nosotros .persona img{
+  border-radius: 50%;
+  margin: 0.8em;   
+}
+
+#nosotros .persona h5, 
+#nosotros .persona h6{
+  margin: 0;
+  font-size: 1.1em;
+}
+#nosotros .persona p{
+  margin: 5px;
+  font-size: 0.83em;
+}
+
+/*fin nosotros*/
+
+/*inicio Servicios*/
+
+#servicios .ser_img img{
+  margin-top: 10px;
+  width: 100%;
+}
+
+#servicios .ser_img h2{
+  font-size: 1.8em;
+  text-align: center;
+}
+
+#servicios .servicios{
+  border: solid grey 1px;
+  border-radius: 1em;
+  margin: 1em 0;
+  padding: 1em;
+  overflow: hidden;
+}
+
+#servicios .servicios h4{
+  font-size: 1.3em;
+  font-style: italic;
+  border-bottom: 1px solid rgb(18, 126, 161);
+  margin: 10px 0;
+}
+
+#servicios .servicios p{
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+#servicios .servicios .ser_info{
+  width: 65%;
+}
+
+#servicios .servicios img{
+  border-radius: 1em;
+  width: 30%;
+}
+
+#servicios .servicios:nth-child(even) img{
+  float: right;
+}
+
+#servicios .servicios:nth-child(even) .ser_info{
+  float: left;
+}
+
+#servicios .servicios:nth-child(odd) img{
+  float: left;
+}
+
+#servicios .servicios:nth-child(odd) .ser_info{
+  float: right;
+}
+
+/*fin servicios*/
+
+/*inicio galeria*/
+.galeria .foto{
+  display: inline-block;
+  width: 22%;
+  
+  margin: 0.5em 0 0.5em 1%;
+  border: solid #dddd;
+  padding: 0.2em;
+  box-sizing: border-box;
+}
+
+.galeria .foto img{
+  display: block;
+  width: 100%;
+}
+
+
+
+
+
+/*fin galeria*/
+
+/*inicio normativa*/
+
+#normativa h1{
+  font-size: 1.5em;
+}
+
+#normativa h2{
+  margin-top: 35px;
+}
+
+#normativa h3{
+  margin-bottom: 0;
+}
+#normativa p{
+  margin-top: 0;
+}
+
+/*fin normativa*/
+
+/*inicio contacto*/
+
+#contacto .columnas{
+  margin-top: 40px;
+}
+
+#contacto .columna{
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+#contacto .columna h2, 
+#contacto .columna h3{
+  text-align: center;
+  font-size: 1.3em;
+  margin: 10px;
+}
+
+#contacto  p{
+  margin: 5px;
+}
+
+#contacto .columna.left{
+  float: left;
+  width: 45%;
+}
+
+#contacto .app {
+  display: flex;
+  flex-direction: column;
+}
+
+#contacto .app i {
+  padding: 10px;
+  font-size: 1.1em;
+  
+}
+
+#contacto i:hover{
+  color: rgba(0,0,0,0.3);
+}
+
+#contacto .columna.right{
+  float: right;
+  width: 55%;
+}
+
+#contacto .formulario label{
+  vertical-align: top;
+  width: 20%;
+  display: inline-block;
+  height: 40px;
+}
+
+#contacto .formulario input,
+#contacto .formulario textarea{
+  background-color: #dddd;
+  border-radius: 5px;
+  border: solid 1px #999;
+  padding: 0.4em 0.6em;
+  font-size: 0.8em;
+}
+
+#contacto .formulario input{
+  width: 75%;
+  height: 30px;
+}
+
+#contacto .formulario textarea{
+  width: 75%;
+  height: 100px;
+  resize: none;
+}
+
+#contacto .formulario input[type="submit"]  {
+  width: auto;
+  background-color: rgb(6, 65, 65);
+  box-shadow: 0 0 10px rgb(85, 84, 84);
+  color: white;
+  cursor: pointer;
+}
+
+/*fin contacto*/
+
+
+/*inicio footer*/
+footer .row{
+  clear: both;
+  border-top: rgb(85, 84, 84) solid 1px;
+  margin-top: 10px;
+  display: flex;
+  background-color:#bef6e9;
+  height: 70px;
+  align-items: center; 
+}
+
+footer .columna1{
+  width: 70%;
+  font-size: 1.1em;   
+}
+
+footer .columna2{
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer i{
+  font-size: 25px;
+}
+
+footer h5{
+  color: black;
+}
+
+footer i:hover{
+  color: rgba(0,0,0,0.3);
+}
+
+/*fin footer*/
+
