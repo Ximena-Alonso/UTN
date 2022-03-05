@@ -10,13 +10,13 @@ body h1, h2, h3, h4, h5, h6{
   color: rgb(18, 126, 161) ;
 }
 
-header{
+.header{
   background: rgb(190,246,233);
   background: linear-gradient(0deg, rgba(190,246,233,1) 0%, rgba(80,251,234,0.969625350140056) 60%);
   font-family: Mochiy Pop P One;
 }
 
-header h1{
+.header h1{
   font-size: 20px;
   display: inline;
   position: relative;
@@ -24,7 +24,7 @@ header h1{
   color: black;
 }
 
-header img{
+.header img{
   border-radius: 50%;
   width: 100px;
   margin: 5px 0 0 30px;
@@ -91,17 +91,11 @@ nav ul li.activo{
   border: 3px double black;
   padding: 10px;
   box-shadow: 20px 0 15px black;
-  transition: all 2s ease;
+
   max-width: 85%;
 }
 
-#empresa .columna1:hover , 
-#empresa .columna2:hover{
-  background-color: rgba(149, 247, 238, 0.918);
-  border-radius: 10px;
-  cursor: pointer;
-  transform: scale(1.05, 1);
-}
+
 
 #empresa .columna2{
   break-before: column;
@@ -126,38 +120,36 @@ nav ul li.activo{
   list-style:none;
   margin:0;
   padding:0;
-  margin-bottom: 220px;
+}
+
+#empresa .eleccion > li {
+  float:left;
+}
+  
+#empresa .eleccion li a:hover {
+  background:#5b78a7;
+  max-width: 100%;
 }
 
 #empresa .eleccion ul a {
   display: block;
+  padding: 2em;
+  background-color: #b0ceeb;
   text-decoration: none;
-  text-transform: uppercase;
+  color: #191C26;
 }
 
-#empresa .eleccion > ul li {
-  position: relative;
-  width: 100%;
-  
-}
-
-#empresa .eleccion li a:hover {
-  background:#5b78a7;
-  max-width: 38%;  
-}
-
-#empresa .eleccion li  .item {
+#empresa .eleccion ul  .item {
   display:none;
-  position: relative;
-  top: -30px;
-  width: 62%;
-  float: right; 
-  border: black solid 1px;
-  border-radius: 2.5%;  
+  position: initial;
+  top: 0;
+  width: 100%;
+  height: auto;
+  float: none;
 }
-
 #empresa .eleccion ul li:hover > .item {
-  display: block;  
+  display:block;
+  max-width: 100%;
 }
 
 @media  (max-width:720px) {
@@ -180,17 +172,11 @@ nav ul li.activo{
       border: 3px double black;
       padding: 10px;
       box-shadow: 20px 0 15px black;
-      transition: all 2s ease;
+     
       max-width: 90%;
   }
   
-  #empresa .columna1:hover , 
-  #empresa .columna2:hover{
-      background-color: rgba(149, 247, 238, 0.918);
-      border-radius: 10px;
-      cursor: pointer;
-      transform: scale(1.05, 1);
-  }
+
    
   #empresa .columna2{
       margin-top: 20px;
@@ -203,41 +189,6 @@ nav ul li.activo{
       max-width: 900%;
   } 
       
-  #empresa .eleccion ul {
-      list-style:none;
-      margin:0;
-      padding:0;
-  }
-  
-  #empresa .eleccion > li {
-      float:left;
-  }
-      
-  #empresa .eleccion li a:hover {
-      background:#5b78a7;
-      max-width: 100%;
-  }
-  
-  #empresa .eleccion ul a {
-      display: block;
-      padding: 2em;
-      background-color: #b0ceeb;
-      text-decoration: none;
-      color: #191C26;
-  }
-  
-  #empresa .eleccion ul  .item {
-      display:none;
-      position: initial;
-      top: 0;
-      width: 100%;
-      height: 270px;
-      float: none;
-  }
-  #empresa .eleccion ul li:hover > .item {
-      display:block;
-      max-width: 100%;
-  }
   
 }
 
@@ -333,12 +284,12 @@ nav ul li.activo{
 }
 
 #servicios .servicios .ser_info{
-  width: 65%;
+  width: 70%;
 }
 
 #servicios .servicios img{
   border-radius: 1em;
-  width: 30%;
+  width: 25%;
 }
 
 #servicios .servicios:nth-child(even) img{
