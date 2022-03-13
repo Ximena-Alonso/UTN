@@ -6,6 +6,7 @@ var logger = require('morgan');
 var session = require('express-session');
 const res = require('express/lib/response');
 const req = require('express/lib/request');
+const router = require('./routes');
 
 //var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
@@ -28,21 +29,70 @@ app.use(session({
   saveUninitialized:true
 }));
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res, next) {
   var conocido =Boolean (req.session.nombre);
+  var menor = Boolean (req.session.menor);
 
   res.render('index',{
-    title: 'Sesiones en Express',
+    title: 'Panel del alumno UTN',
     conocido: conocido,
-    nombre: req.session.nombre
+    nombre: req.session.nombre,
+    clave: req.session.clave,
+    edad: req.session.edad,
+    curso: req.session.curso, 
+    menor: menor
   });
+  
 });
 
-app.post('ingresar',function (req, res) {
-  if(req.body.nombre) {
-    req.session.nombre=req.body.nombre
+app.post('/ingresar',function (req, res) {
+  if (req.body.nombre){
+    if (req.body.edad) {
+    req.session.nombre = req.body.nombre
+    req.session.clave =req.body.clave
+    req.session.edad =req.body.edad
+    req.session.curso =req.body.curso
+    console.log(req.body.edad)
+    console.log(req.body.nombre)
+      
+    if (req.session.edad<18){     
+      menor= true; 
+      console.log(menor);
+      req.session.menor =menor;
+      
+    }
+    else {
+      menor= false; 
+      console.log(menor);
+      req.session.menor =menor;
+      
+    }
+      
+  }}
+   
+  
+res.redirect('/');
+});
+
+app.get('/', (req, res)=>{
+  if (req.session.edad<18){ 
+    console.log(req.session.edad)       
+    menor= true; 
+    console.log(menor);
+    var menor = req.session.menor;
+    res.render('index',{
+      menor
+    })
   }
-  res.redicrect('/');
+  /*res.render('/',{
+    menor*/
+  
+})
+
+
+app.get('/salir', function(req, res){
+  req. session.destroy();
+  res. redirect('/');
 });
 
 //app.use('/', indexRouter);

@@ -1,11 +1,29 @@
 <h1>{{title}}</h1>
 {{#if conocido}}
-<p>Hola {{nombre}} <a href="/salir"></a> </p>
+    <p>Hola {{nombre}} </p>
+    {{#if menor}}
+            <p> {{nombre}} estas cursando " {{curso}}"  pero ten en cuenta que como eres menor de edad no podras obtener el certificado</p>
+    {{/if}}
+
+    {{#unless menor}}
+            <p> {{nombre}} estas cursando " {{curso}}" y de aprobarlo se emitira el certificado correspondiente</p>
+    {{/unless}}
+    
+    
+    <a href="/salir">Salir</a>
 {{/if}}
 
 {{#unless conocido}}
-<p>No te conozco</p>
+<p>Registrarse</p>
 <form action="/ingresar" method="post">
-    <input type="text" name="nombre"><button>ingresar</button>
+    <p>Ingrese el nombre de usuario</p>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <p>Ingrese su edad</p>
+    <input type="number" name="edad" placeholder="Edad" required>
+    <p>Ingrese el nombre del curso al que esta inscripto</p>
+    <input type="text" name="curso" placeholder="curso" required>
+    <p>Ingrese la contraseña</p>
+    <input type="password" name="clave" placeholder="Contraseña" required>
+    <button>Ingresar</button>
 </form>
 {{/unless}}
