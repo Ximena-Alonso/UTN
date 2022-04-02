@@ -26,9 +26,59 @@ app.use('/users', usersRouter);
 
 var pool = require('./models/bd');
 
-pool.query('select * from empleados').then(function(resultados){
-  console.log(resultados)
-});
+//INSERT
+//var obj={
+  //Nombre: 'Ayelen',
+  //Apellido: 'Torres',
+  //Trabajo: 'Diseñadora',
+  //Edad: 30,
+  //Salario: 100000,
+  //Mail: 'ayelent@gmail.com' 
+//}
+
+//pool.query('insert into empleados set ?',[obj]).then(function(resultados){
+  //console.log(resultados)
+//});
+
+// INSERT
+//var obj={
+ // Nombre: 'Miguel',
+  //Apellido: 'Gomez',
+  //Trabajo: 'Diseñador',
+  //Edad: 30,
+  //Salario: 100000,
+  //Mail: 'miguelg@gmail.com' 
+//}
+
+//pool.query('insert into empleados set ?',[obj]).then(function(resultados){
+  //console.log(resultados)
+//});
+
+//UPDATE
+//var id=1;
+//var obj= {
+  //Nombre: 'Micaela',
+  //Apellido: 'Salas'
+//}
+
+//pool.query('update empleados set ? where id_emp=?',[obj, id]).then(function(resultados){
+  //console.log(resultados)
+//});
+
+//DELETE
+//var id= 23;
+//pool.query('delete from empleados where id_emp=?',[id]).then(function(resultados){
+  //console.log(resultados)
+//});
+
+
+
+//SELECT  
+//pool.query('select * from empleados').then(function(resultados){
+  //console.log(resultados)
+//});
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
