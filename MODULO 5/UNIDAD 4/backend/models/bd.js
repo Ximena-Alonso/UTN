@@ -1,3 +1,4 @@
+//vincula a bd
 var mysql= require('mysql');
 var util= require('util');
 

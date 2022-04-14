@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* para queinicie en admin/login */
 router.get('/', function(req, res, next) {
   res.redirect('admin/login');
 });

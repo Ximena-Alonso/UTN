@@ -18,6 +18,7 @@ router.get('/logout', function(req, res, next) {
   });
 });
 
+/* Pasa los datos de usuario a admin/novedades en view */
 router.post('/', async (req, res, next)=>{
   try {
     var usuario=req.body.usuario;

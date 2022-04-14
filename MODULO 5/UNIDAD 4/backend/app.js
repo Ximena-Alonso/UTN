@@ -4,12 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//requerimiento del env
 require('dotenv').config();
+
+//requerimiento expresssession
 var session =require ('express-session');
 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
+//genera las rutas
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
 const async = require('hbs/lib/async');
@@ -48,6 +53,8 @@ secured =async (req, res, next)=>{
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//usa las rutas -- incorporar archivos
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
 

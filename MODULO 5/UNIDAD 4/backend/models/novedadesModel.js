@@ -1,7 +1,7 @@
 var pool=require('./bd');
 const async = require('hbs/lib/async');
 
-/*llama para listar las novedades*/
+/*trae para listar las novedades*/
 async function getNovedades() {
     try {
         var query ='select * from novedades';
@@ -12,7 +12,7 @@ async function getNovedades() {
     } 
 }
 
-/*llama para agregar las novedades*/
+/*TRAE para agregar las novedades*/
 async function insertNovedades(obj) {
     try {
         var query ='insert into novedades set?';
