@@ -1,0 +1,64 @@
+body{
+  font-family:open sans;
+  font-size: 14px;
+  margin: 5px 20px 0 20px;
+  line-height: 20px;
+  background-color: #edf1f0;
+}
+
+body h1, h2, h3, h4, h5, h6{
+  color: rgb(18, 126, 161) ;
+}
+
+header{
+  background: rgb(190,246,233);
+  background: linear-gradient(0deg, rgba(190,246,233,1) 0%, rgba(80,251,234,0.969625350140056) 60%);
+  font-family: Mochiy Pop P One;
+}
+
+header h1{
+  font-size: 20px;
+  display: inline;
+  position: relative;
+  
+  color: black;
+}
+
+header img{
+  border-radius: 50%;
+  width: 100px;
+  margin: 5px 0 0 30px;
+}
+
+
+footer .row{
+  clear: both;
+  border-top: rgb(85, 84, 84) solid 1px;
+  margin-top: 10px;
+  display: flex;
+  background-color:#bef6e9;
+  height: 70px;
+  align-items: center; 
+}
+
+footer .columna1{
+  width: 70%;
+  font-size: 1.1em;   
+}
+
+footer .columna2{
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer i{
+  font-size: 25px;
+}
+
+footer h5{
+  color: black;
+}
+
+footer i:hover{
+  color: rgba(0,0,0,0.3);
+}

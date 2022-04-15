@@ -3,7 +3,7 @@ var router = express.Router();
 var novedadesModel =require('../../models/novedadesModel')
 
 
-/* GET novedades page. */
+/* vincula pagina noveades y pasa datos de base de datos */
 router.get('/',async function(req, res, next) {
 
   var novedades = await novedadesModel.getNovedades();
@@ -15,7 +15,7 @@ router.get('/',async function(req, res, next) {
   });
 });
 
-/* GET agregar page. */
+/* vincula pagina agregar  */
 router.get('/agregar',(req, res, next)=> {
 
   res.render('admin/agregar', { 

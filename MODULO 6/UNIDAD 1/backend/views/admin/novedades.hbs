@@ -1,0 +1,50 @@
+<div class=" d-md-flex justify-content-md-end" style="margin-top:10px">
+  <a class="btn btn-primary" type="button" href="/admin/login/logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i> </a>
+</div>
+
+
+
+<div class="container">
+  <h2 class="col-10">Bienvenido {{usuario}}!!!</h2>
+  <div class="row">
+    <div class="col-10"> <h3>Listado de Servicios contratados</h3></div>
+    
+  </div>
+  <div class="row">
+    <div class="col"> 
+      <table class="table">
+        <thead>
+          <tr class="table-secondary">
+            
+            <th scope="col" class="col-6">Servicio</th>
+            <th scope="col" class="col-2">Plazo</th>
+            <th scope="col" class="col-1">Modificar contratacion</th>
+            <th scope="col" class="col-1" > Cancelar contratacion</th>
+            
+          </tr>
+        </thead>
+        <tbody>  
+          {{#each novedades}}
+          <tr>
+            
+            <td class="col-6">{{Servicio}} </td>
+            <td class="col-2">{{Plazo}} </td>
+            <td class="col-1">
+              <a href="" class="btn btn-secondary"><i class="fa fa-pencil"></i> </a>
+            <td class="col-1">
+              <a href="" class="btn btn-secondary"><i class="fa fa-trash"></i> </a>
+            </td>
+          </tr>
+          {{/each}}
+        
+      </table>
+    </div>
+  </div>
+  </br>
+  <div class="row">
+    <div class="col-4"> <h3>Contratar otros servicios</h3></div>
+    <div class="col-2" >
+      <a class="btn btn-success" href="/admin/novedades/agregar"><i class="fa fa-plus"></i>Nuevo</a>
+    </div>
+  </div>
+</div>
