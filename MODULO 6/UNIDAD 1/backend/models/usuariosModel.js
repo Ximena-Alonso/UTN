@@ -7,8 +7,7 @@ async function getUserByPassword (user, password) {
     
     try {
         var query ='select * from usuarios where usuario=? and password =? limit 1';
-        console.log(user);
-        console.log(query);
+        
         var rows =await pool.query (query, [user, md5(password)]);
         console.log(rows);
         return rows[0];

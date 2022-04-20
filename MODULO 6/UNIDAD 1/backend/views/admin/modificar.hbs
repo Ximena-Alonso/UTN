@@ -1,0 +1,32 @@
+<!--vista modificar-->
+<div class="container" style="margin-top:10px">
+    <div class="row" >
+        <div class="col">
+            <h4>Modificar servicio</h4>
+            <p><b>Nota:</b>El servicio elegido aparecerá en la página pero quedara pendiente hasta modificar el contrato  </p>
+            <form action="/admin/novedades/modificar" method="post" >
+                <input type="hidden" value="{{novedad.item}} " name="item">
+                
+                <div class="mb-3-row">
+                        <label for="Servicio" style="font-size: 1.5em;" > <b>Servicio</b></label>
+                        <input type="text" class="form-control" placeholder="Servicio" name="Servicio" value="{{novedad.Servicio}} ">
+                    
+                </div>
+                <div class="mb-3" style="margin-top:10px">
+                        <label for="Plazo" style="font-size: 1.5em;" > <b>Plazo</b></label>
+                        <input type="text" class="form-control" placeholder="Plazo" name="Plazo" value="{{novedad.Plazo}} ">
+                    
+                </div>
+                <div class="mb-3" style="margin-top:10px">
+                        <label for="Descripcion" style="font-size: 1.5em;" > <b>Descripción</b></label>
+                        <textarea type="text" class="form-control" placeholder="Descripcion: Incorporar nombre del equipo, ubicacion" name="Descripcion" >{{novedad.Descripcion}}</textarea>
+                    
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top:10px">Modificar</button>
+            </form>
+            {{#if error}}
+                <p> {{message}} </p>
+            {{/if}}
+        </div>
+    </div>        
+</div>
