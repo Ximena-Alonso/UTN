@@ -1,7 +1,10 @@
 var express = require('express');
 const async = require('hbs/lib/async');
 var router = express.Router();
-var novedadesModel =require('../../models/novedadesModel')
+var novedadesModel =require('../../models/novedadesModel');
+var util = require('util');
+var cloudinary = require ('cloudinary').v2;
+const uploader =util.promisify(cloudinary.uploader.upload);
 
 
 /* GET novedades page. */
@@ -28,6 +31,12 @@ router.get('/agregar',(req, res, next)=> {
 router.post('/agregar',async (req, res, next) => {
   var usuario= req.session.nombre;
   try {
+      var img_id= '';
+      if(req.files && Object.keys(req.files).length>0){
+        imagen= req.files.imagen;
+        img_id =(await uploader(imagen.tempFilePath)).public_id;
+      }
+
       if (req.body.Servicio !="" && req.body.Plazo != "" && req.body.Descripcion !=""){
           let obj = { 
             usuario: usuario,
@@ -37,7 +46,11 @@ router.post('/agregar',async (req, res, next) => {
           }
             
           console.log(usuario)
-          await novedadesModel.insertNovedades(obj,usuario);
+          await novedadesModel.insertNovedades({
+            ...req.body,
+            usuario,            
+            img_id
+          });
           res.redirect ('/admin/novedades')
       }else {
         res.render('admin/agregar', { 

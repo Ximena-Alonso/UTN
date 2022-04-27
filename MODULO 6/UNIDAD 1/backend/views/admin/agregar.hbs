@@ -4,7 +4,7 @@
         <div class="col">
             <h4>Agregar servicio</h4>
             <p><b>Nota:</b>El servicio elegido aparecerá en la página pero quedara pendiente hasta realizar el contrato  </p>
-            <form action="/admin/novedades/agregar" method="post" >
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data"/>
                 
                 <div class="mb-3-row">
                         <label for="Servicio" style="font-size: 1.5em;" > <b>Servicio</b></label>
@@ -14,6 +14,11 @@
                 <div class="mb-3" style="margin-top:10px">
                         <label for="Plazo" style="font-size: 1.5em;" > <b>Plazo</b></label>
                         <input type="text" class="form-control" placeholder="Plazo" name="Plazo">
+                    
+                </div>
+                <div class="mb-3" style="margin-top:10px">
+                        <label style="font-size: 1.5em;" > <b>Imagen</b>
+                        <input type="file" name="imagen" id="imagen"/></label>
                     
                 </div>
                 <div class="mb-3" style="margin-top:10px">
