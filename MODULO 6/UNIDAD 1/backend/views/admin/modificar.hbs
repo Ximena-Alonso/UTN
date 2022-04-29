@@ -4,7 +4,7 @@
         <div class="col">
             <h4>Modificar servicio</h4>
             <p><b>Nota:</b>El servicio elegido aparecerá en la página pero quedara pendiente hasta modificar el contrato  </p>
-            <form action="/admin/novedades/modificar" method="post" >
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data" >
                 <input type="hidden" value="{{novedad.item}} " name="item">
                 
                 <div class="mb-3-row">
@@ -15,6 +15,17 @@
                 <div class="mb-3" style="margin-top:10px">
                         <label for="Plazo" style="font-size: 1.5em;" > <b>Plazo</b></label>
                         <input type="text" class="form-control" placeholder="Plazo" name="Plazo" value="{{novedad.Plazo}} ">
+                    
+                </div>
+                <div class="mb-3" style="margin-top:10px">
+                    <p>
+                        <label> <b>Imagen</b><input type="file" name="imagen" id="imagen"/></label>
+                    </p>
+                     <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}} ">
+                    </p>    
+                        
                     
                 </div>
                 <div class="mb-3" style="margin-top:10px">

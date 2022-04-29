@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-04-2022 a las 15:16:19
+-- Tiempo de generación: 29-04-2022 a las 20:06:40
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -32,23 +32,25 @@ CREATE TABLE IF NOT EXISTS `nov1` (
   `Servicio` text NOT NULL,
   `Plazo` varchar(50) NOT NULL,
   `Descripcion` varchar(500) NOT NULL,
+  `img_id` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`item`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=41 ;
 
 --
 -- Volcado de datos para la tabla `nov1`
 --
 
-INSERT INTO `nov1` (`item`, `usuario`, `Servicio`, `Plazo`, `Descripcion`) VALUES
-(1, 'ximena', 'Servicio de mantenimiento de ascensor "corredor 1"', '1 año', 'Servicio de verificación y mantenimiento preventivo según establece la legislación de ascensor "corredor 1". No incluye reparaciones mayores'),
-(2, 'ximena', 'Servicio de mantenimiento ascensor "azotea"', '3 meses', 'Servicio de verificación y mantenimiento preventivo según establece la legislación de ascensor "azotea". No incluye reparaciones mayores'),
-(3, 'ximena', 'Servicio de mantenimiento montacarga ', '3 meses ', 'Servicio de verificación y mantenimiento preventivo según establece la legislación del montacarga. No incluye reparaciones mayores'),
-(4, 'flavia', 'Servicio de instalación de ascensor "principal"', '2 meses', 'Servicio de planificación e instalación según establece la legislación de ascensor "principal". Entrega de planos finalizada la obra. Se realizará modificaciones en caso de que la inspección municipal lo requiera'),
-(5, 'flavia', 'Servicio de  habilitación  de ascensor "principal"', '2 meses', 'Servicio de habilitación con puesta en marcha, realización y recopilación de documentación necesaria, recepción de visita del inspector municipal'),
-(27, 'ximena', 'Instalacion montacarga 2   ', '1 año  6 meses  ', 'Montacarga cocina!'),
-(29, 'ximena', 'Servicio mantenimiento montacarga 2', '2 meses', 'Montacarga cocina'),
-(30, 'flavia', 'Servicio mantenimiento ascensor "principal "', '1 año ', 'Ascensor principal'),
-(32, 'flavia', 'Servicio reparacion ascensor principal', '2 semanas', 'Alcance: reparacion y repuestos');
+INSERT INTO `nov1` (`item`, `usuario`, `Servicio`, `Plazo`, `Descripcion`, `img_id`) VALUES
+(1, 'ximena', 'Servicio de mantenimiento de ascensor "corredor 1"', '1 año', 'Servicio de verificación y mantenimiento preventivo según establece la legislación de ascensor "corredor 1". No incluye reparaciones mayores', NULL),
+(2, 'ximena', 'Servicio de mantenimiento ascensor "azotea"', '3 meses', 'Servicio de verificación y mantenimiento preventivo según establece la legislación de ascensor "azotea". No incluye reparaciones mayores', NULL),
+(3, 'ximena', 'Servicio de mantenimiento montacarga ', '3 meses ', 'Servicio de verificación y mantenimiento preventivo según establece la legislación del montacarga. No incluye reparaciones mayores', NULL),
+(4, 'flavia', 'Servicio de instalación de ascensor "principal"', '2 meses', 'Servicio de planificación e instalación según establece la legislación de ascensor "principal". Entrega de planos finalizada la obra. Se realizará modificaciones en caso de que la inspección municipal lo requiera', NULL),
+(5, 'flavia', 'Servicio de  habilitación  de ascensor "principal"', '2 meses', 'Servicio de habilitación con puesta en marcha, realización y recopilación de documentación necesaria, recepción de visita del inspector municipal', NULL),
+(27, 'ximena', 'Instalacion montacarga 2   ', '1 año  6 meses  ', 'Montacarga cocina!', NULL),
+(29, 'ximena', 'Servicio mantenimiento montacarga 2 ', '2 meses ', 'Montacarga cocina', NULL),
+(30, 'flavia', 'Servicio mantenimiento ascensor "principal "', '1 año ', 'Ascensor principal', NULL),
+(32, 'flavia', 'Servicio reparacion ascensor principal', '2 semanas', 'Alcance: reparacion y repuestos', NULL),
+(40, 'ximena', 'Servicio mantenimiento montacarga 2 ', '2 semanas', 'uku', ' ');
 
 -- --------------------------------------------------------
 
